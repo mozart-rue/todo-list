@@ -1,0 +1,8 @@
+.button {
+  background: var(--blue-dark);
+  color: var(--gray-100);
+  border-radius: 8px;
+  border: none;
+  height: 2rem;
+  width: 64px;
+}
