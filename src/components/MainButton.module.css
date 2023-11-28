@@ -1,8 +1,18 @@
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background: var(--blue-dark);
   color: var(--gray-100);
   border-radius: 8px;
   border: none;
-  height: 2rem;
-  width: 64px;
+  gap: 0.5rem;
+
+  height: 3.25rem;
+  padding: 1rem;
+
+  line-height: 140%;
+  font-size: 0, 875rem;
+  font-weight: bold;
 }
