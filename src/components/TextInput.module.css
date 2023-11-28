@@ -1,8 +1,20 @@
-.input input[type="text"] {
+.input {
   background: var(--gray-500);
   border: 1px solid var(--gray-700);
-  color: var(--gray-300);
+  color: var(--gray-100);
   border-radius: 8px;
-  height: 2rem;
-  width: 60vw;
+
+  height: 3.375rem;
+  padding: 1rem;
+  width: 100%;
+
+  line-height: 140%;
+}
+
+.input::placeholder {
+  color: var(--gray-300);
+}
+
+.input:focus {
+  border-color: var(--purple-dark);
 }
