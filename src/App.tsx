@@ -14,7 +14,7 @@ function App() {
           <MainButton />
         </div>
         <div>
-          <ListHeader />
+          <ListHeader tasksCounter={10} checkedTasksCounter={1} />
         </div>
       </section>
     </main>
