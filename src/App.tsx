@@ -2,6 +2,7 @@ import styles from "./app.module.css";
 import { Header } from "./components/Header";
 import { MainButton } from "./components/MainButton";
 import { TextInput } from "./components/TextInput";
+import { ListHeader } from "./components/list/ListHeader";
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
         <div className={styles.inputContainer}>
           <TextInput />
           <MainButton />
+        </div>
+        <div>
+          <ListHeader />
         </div>
       </section>
     </main>
