@@ -5,11 +5,15 @@ import { TextInput } from "./components/TextInput";
 
 function App() {
   return (
-    <div className={styles.input}>
+    <main>
       <Header />
-      <TextInput />
-      <MainButton />
-    </div>
+      <section className={styles.content}>
+        <div className={styles.inputContainer}>
+          <TextInput />
+          <MainButton />
+        </div>
+      </section>
+    </main>
   );
 }
 
