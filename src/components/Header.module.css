@@ -2,8 +2,7 @@
   background: var(--gray-700);
   display: flex;
   justify-content: center;
-  /* height: 200px; */
-  padding: 1.25rem 0;
+  padding: 5rem 0.625rem;
 }
 
 .header img {
