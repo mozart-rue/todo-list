@@ -5,6 +5,8 @@ import { MainButton } from "./components/MainButton";
 import { TextInput } from "./components/TextInput";
 import { ListHeader } from "./components/list/ListHeader";
 import { useState } from "react";
+import { Item } from "./components/list/Item";
+import { Empty } from "./components/list/Empty";
 
 export interface ITask {
   id: number;
@@ -75,11 +77,26 @@ function App() {
             <PlusCircle size={16} color="#f2f2f2" weight="bold" />
           </MainButton>
         </div>
-        <div>
+        <div className={styles.tasksList}>
           <ListHeader
             tasksCounter={tasks.length}
             checkedTasksCounter={checkedTasksCounter}
           />
+
+          {tasks.length > 0 ? (
+            <div>
+              {tasks.map((task) => (
+                <Item
+                  key={task.id}
+                  data={task}
+                  removeTask={handleRemoveTask}
+                  toggleTaskStatus={handleToggleTask}
+                />
+              ))}
+            </div>
+          ) : (
+            <Empty />
+          )}
         </div>
       </section>
     </main>
