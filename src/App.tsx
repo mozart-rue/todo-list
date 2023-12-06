@@ -4,6 +4,12 @@ import { MainButton } from "./components/MainButton";
 import { TextInput } from "./components/TextInput";
 import { ListHeader } from "./components/list/ListHeader";
 
+export interface ITask {
+  id: number;
+  text: string;
+  isChecked: boolean;
+}
+
 function App() {
   return (
     <main>
