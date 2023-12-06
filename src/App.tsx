@@ -1,4 +1,5 @@
 import styles from "./app.module.css";
+import { PlusCircle } from "phosphor-react";
 import { Header } from "./components/Header";
 import { MainButton } from "./components/MainButton";
 import { TextInput } from "./components/TextInput";
@@ -17,7 +18,10 @@ function App() {
       <section className={styles.content}>
         <div className={styles.inputContainer}>
           <TextInput />
-          <MainButton />
+          <MainButton>
+            Criar
+            <PlusCircle size={16} color="#f2f2f2" weight="bold" />
+          </MainButton>
         </div>
         <div>
           <ListHeader tasksCounter={10} checkedTasksCounter={1} />
