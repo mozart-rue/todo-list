@@ -16,6 +16,14 @@ function App() {
   const [tasks, setTasks] = useState<ITask[]>([]);
   const [inputValue, setInputValue] = useState("");
 
+  const checkedTasksCounter = tasks.reduce((prevValue, currentValue) => {
+    if (currentValue.isChecked) {
+      return prevValue + 1;
+    }
+
+    return prevValue;
+  }, 0);
+
   function handleAddTask() {
     if (!inputValue) {
       return;
@@ -46,7 +54,10 @@ function App() {
           </MainButton>
         </div>
         <div>
-          <ListHeader tasksCounter={10} checkedTasksCounter={1} />
+          <ListHeader
+            tasksCounter={tasks.length}
+            checkedTasksCounter={checkedTasksCounter}
+          />
         </div>
       </section>
     </main>
