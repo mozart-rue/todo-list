@@ -39,6 +39,18 @@ function App() {
     setInputValue("");
   }
 
+  function handleToggleTask({ id, value }: { id: number; value: boolean }) {
+    const updatedTasks = tasks.map((task) => {
+      if (task.id === id) {
+        return { ...task, isChecked: value };
+      }
+
+      return { ...task };
+    });
+
+    setTasks(updatedTasks);
+  }
+
   return (
     <main>
       <Header />
